@@ -1,3 +1,5 @@
+@import "./options.scss";
+
 .header-el {
   z-index: 330;
   width: 100%;
@@ -34,7 +36,8 @@
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    color: white;
+
+    @include text-clip-fn(-120deg);
 
     @media all and (max-width: 750px) {
       font-size: 15px;

@@ -1,0 +1,13 @@
+// 渐变文字(使用蒙板裁剪的方式)
+@mixin text-clip-fn(
+  $deg: 0deg,
+  $color1: cyan,
+  $color2: rgb(72, 163, 248),
+  $color3: rgb(249, 70, 255),
+  $color4: rgb(48, 120, 255)
+) {
+  background: scroll no-repeat center
+    linear-gradient(#{$deg}, $color1, $color2, $color3, $color4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
