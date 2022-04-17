@@ -14,6 +14,19 @@
     background-color: rgba(1, 46, 97, 0.993);
     top: 0;
     left: 0;
+    animation: show-header 400ms ease;
+
+    // 过渡
+    @keyframes show-header {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 
   .title {

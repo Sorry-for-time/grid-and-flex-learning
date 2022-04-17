@@ -44,8 +44,8 @@ body {
   &::-webkit-scrollbar-thumb {
     background: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0.274) 0%,
-      rgba(248, 248, 248, 0.356) 100%
+      rgba(77, 174, 253, 0.979) 0%,
+      rgba(255, 65, 113, 0.781) 100%
     );
     border-radius: 4px;
   }
@@ -83,10 +83,10 @@ body {
 
     @keyframes bgc-scroll {
       from {
-        transform: rotate(-20deg) scale(2);
+        transform: rotate(-20deg) scale(3);
       }
       to {
-        transform: rotate(20deg) scale(2);
+        transform: rotate(20deg) scale(3);
       }
     }
   }

@@ -1,6 +1,6 @@
 .content {
   z-index: 12;
-  margin-top: 20px;
+  margin: 20px 0;
   width: 94%;
   margin-left: 3%;
   display: grid;
@@ -8,17 +8,24 @@
   gap: 24px /* 统一设置行间距和列间距离 */;
 
   .single-element {
-    z-index: 12;
     z-index: 100;
     height: 260px;
-
     border-radius: 18px;
     box-shadow: 0 0 6px 1px rgba(51, 51, 51, 0.616) inset;
-    backdrop-filter: blur(26px) brightness(0.88);
     border: 2px solid rgba(172, 172, 172, 0.616);
     overflow: hidden;
-    transition: 0.2s;
     position: relative;
+
+    filter: brightness(0.88);
+    backdrop-filter: blur(26px);
+    transition: all 0.4s;
+
+    &:hover {
+      z-index: 100;
+      cursor: pointer;
+      filter: brightness(1.1) saturate(1.2);
+      text-decoration: underline;
+    }
 
     a {
       display: flex;
@@ -30,11 +37,6 @@
       font-weight: bolder;
       font-size: 26px;
       padding: 30px;
-    }
-
-    &:hover {
-      cursor: pointer;
-      transform: scale(1.03);
     }
 
     @for $index from 1 through 12 {
