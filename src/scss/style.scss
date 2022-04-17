@@ -1,0 +1,108 @@
+// 引用google fonts
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200&display=swap");
+
+/* 设置全局通用属性 */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box; /* 包括padding和border的属性 */
+}
+
+a {
+  text-decoration: none;
+  &:active {
+    border: 0;
+    outline: none;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+.hide-body {
+  display: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    background: linear-gradient(
+      to bottom,
+      rgb(110, 0, 0) 0%,
+      rgb(44, 0, 116) 30%,
+      rgb(0, 18, 99) 60%,
+      rgb(18, 0, 105) 80%,
+      rgba(97, 0, 65, 0.966) 100%
+    );
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.274) 0%,
+      rgba(248, 248, 248, 0.356) 100%
+    );
+    border-radius: 4px;
+  }
+
+  &::before {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    left: -200px;
+    top: -200px;
+    right: -200px;
+    bottom: -200px;
+    background-size: cover;
+    background: fixed center no-repeat
+      conic-gradient(
+        #9c3cf7 0,
+        #19191c 15.2%,
+        #19191c 18.2%,
+        #1e1ae8 20.5%,
+        #19191c 30.2%,
+        #19191c 50%,
+        #0e0ab4 56.5%,
+        #1e1ae8 59.4%,
+        #060551 66.2%,
+        #101057 72.9%,
+        #242473 85.1%,
+        #1e1ae8 89.1%,
+        #0a06b7 90.6%,
+        #19191c 93.7%,
+        #9c3cf7 100%
+      );
+    filter: brightness(0.4);
+
+    animation: bgc-scroll 6s linear infinite alternate-reverse;
+
+    @keyframes bgc-scroll {
+      from {
+        transform: rotate(-20deg) scale(2);
+      }
+      to {
+        transform: rotate(20deg) scale(2);
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    position: fixed;
+    z-index: -1;
+    left: -200px;
+    top: -200px;
+    right: -200px;
+    bottom: -200px;
+    backdrop-filter: blur(5px);
+  }
+}
+
+@import "./component/slogan.scss";
+@import "./component/header.scss";
+@import "./component/content.scss";

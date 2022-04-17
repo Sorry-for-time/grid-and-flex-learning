@@ -1,9 +1,11 @@
 {
   "name": "grid-and-flex-learning",
-  "private": true,
+  "author": "Shalling",
+  "license": "MIT",
+  "private": false,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },

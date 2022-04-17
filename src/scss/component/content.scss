@@ -1,0 +1,77 @@
+.content {
+  z-index: 12;
+  margin-top: 20px;
+  width: 94%;
+  margin-left: 3%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px /* 统一设置行间距和列间距离 */;
+
+  .single-element {
+    z-index: 12;
+    z-index: 100;
+    height: 260px;
+
+    border-radius: 18px;
+    box-shadow: 0 0 6px 1px rgba(51, 51, 51, 0.616) inset;
+    backdrop-filter: blur(26px) brightness(0.88);
+    border: 2px solid rgba(172, 172, 172, 0.616);
+    overflow: hidden;
+    transition: 0.2s;
+    position: relative;
+
+    a {
+      display: flex;
+      z-index: 2;
+      text-align: center;
+      font-family: "Titillium Web", sans-serif;
+      letter-spacing: 2px;
+      color: white;
+      font-weight: bolder;
+      font-size: 26px;
+      padding: 30px;
+    }
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.03);
+    }
+
+    @for $index from 1 through 12 {
+      &:nth-child(#{$index}) {
+        animation: showing #{2100 + $index * 100}ms ease-in-out forwards;
+      }
+    }
+
+    @keyframes showing {
+      from {
+        opacity: 0;
+        transform: scale(0) translateY(10vh) rotateY(120deg) rotateX(180deg)
+          rotateZ(90deg);
+      }
+      to {
+        transform: scale(1) translateY(0) rotateY(0deg) rotateX(0deg)
+          rotateZ(0deg);
+        opacity: 1;
+      }
+    }
+  }
+
+  @media all and (max-width: 1250px) {
+    grid-template-columns: repeat(2, 1fr);
+    .ele {
+      a {
+        font-size: 28px;
+      }
+    }
+  }
+
+  @media all and (max-width: 720px) {
+    grid-template-columns: 1fr;
+    .ele {
+      a {
+        font-size: 30px;
+      }
+    }
+  }
+}
