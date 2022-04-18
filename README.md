@@ -17,7 +17,7 @@
 
 ## 可能需要注意的地方:
 
-1. 这个项目采用 vite 脚手架搭建, 所以你需要已经有安装 Node 环境(Node Version >= 12), 并且已将安装好了 vite, 如果都 OK, 您可以顺利启动这个项目
+1. 这个项目采用 vite 脚手架搭建, 所以你需要已经有安装 Node 环境(Node Version >= 12)和脚手架, 如果都 OK, 便可以 1 开始
 
    - 简要步骤(open in terminal: `zsh, bash, powershell...`)
 
