@@ -4,14 +4,17 @@
   top: 2vh;
   left: 0;
   font-family: "Titillium Web", sans-serif;
-  text-shadow: 0 0 40px rgb(0, 92, 230);
+  text-shadow: 0 0 40px rgb(18, 87, 190);
   letter-spacing: 2vw;
   font-weight: 900;
   font-size: 20vw !important;
   color: rgba(111, 255, 248, 0.925);
   font-size: 30px;
   text-align: center;
-  animation: slogan-fade-in 600ms cubic-bezier(0.42, 0.57, 0.11, 1.1);
+  font-style: italic;
+  text-decoration: underline rgba(79, 146, 209, 0.205);
+
+  animation: slogan-fade-in 600ms cubic-bezier(0.42, 0.57, 0.13, 1.1);
   @media all and (max-width: 1250px) {
     top: 20vh;
   }

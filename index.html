@@ -7,8 +7,11 @@
     <title>Grid-and-flex-learning</title>
     <script type="module" src="/src/main.ts" async></script>
   </head>
+
+  <!-- 防止抖动: 加载阶段隐藏页面, 在加载完成后移除style -->
   <body style="display: none">
-    <header class="header-el">
+    <!-- 导航栏 -->
+    <header class="header-el once-show">
       <div class="title">Everything is important</div>
       <section>
         <span>star✨</span>
@@ -16,20 +19,14 @@
         <span>wave👋</span>
       </section>
     </header>
+
+    <!-- 背景标语 -->
     <section class="slogan">NEON</section>
+
+    <!-- 主体部分 -->
     <ul class="content">
       <li class="single-element"><a>Almost before we know it, we had left ground.</a></li>
-      <li class="single-element"><a>Almost before we know it, we had left ground.</a></li>
-      <li class="single-element"><a>Almost before we know it, we had left ground.</a></li>
-      <li class="single-element"><a>Almost before we know it, we had left ground.</a></li>
-      <li class="single-element"><a>Almost before we know it, we had left ground.</a></li>
-      <li class="single-element"><a>Almost before we know it, we had left ground.</a></li>
-      <li class="single-element"><a>Almost before we know it, we had left ground.</a></li>
-      <li class="single-element"><a>Almost before we know it, we had left ground.</a></li>
-      <li class="single-element"><a>Almost before we know it, we had left ground.</a></li>
-      <li class="single-element"><a>Almost before we know it, we had left ground.</a></li>
-      <li class="single-element"><a>Almost before we know it, we had left ground.</a></li>
-      <li class="single-element"><a>Almost before we know it, we had left ground.</a></li>
+      <!-- 剩下的节点全靠cp,,, 避免全堆在一起看起来很胀... -->
     </ul>
   </body>
 </html>

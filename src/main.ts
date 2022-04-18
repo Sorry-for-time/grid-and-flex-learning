@@ -1,31 +1,29 @@
 import "./scss/style.scss";
 
+import { headerTrack } from "./fragment/header";
+import { contentTrack } from "./fragment/content";
+import multiNodeCloneFactory from "./util/nodeFactory";
+
 window.addEventListener("load", () => {
-  const body: HTMLElement = document.querySelector("body")!;
-  // 在页面加载完成后移除隐藏的样式
-  body.removeAttribute("style");
+  // 在页面加载完成后移除隐藏页面的样式
+  const getBody: HTMLElement = document.querySelector("body")!;
+  getBody.removeAttribute("style");
 
-  const focusColor: string = `rgb(79, 20, 204)`;
-  const EleCollections: NodeListOf<HTMLElement> =
-    document.querySelectorAll(".single-element")!;
+  const targetNode: Node = document.querySelector(".content")!;
+  // 复制节点并插入到dom树
+  let tmpNodes: Array<Node> | null = multiNodeCloneFactory(
+    ".content li",
+    11,
+    true
+  );
 
-  EleCollections.forEach((element) => {
-    element.addEventListener("mousemove", (event) => {
-      // 我直接copy fleet官网的样式
-      element.style.background = `radial-gradient(circle at ${event.offsetX}px ${event.offsetY}px, ${focusColor} 0%, rgba(79, 20, 204, 0) calc(0% + 160px)) no-repeat`;
+  if (tmpNodes) {
+    tmpNodes.forEach((element) => {
+      targetNode?.appendChild(element);
     });
-    element.addEventListener("mouseout", () => {
-      element.style.background = "none";
-    });
-  });
+    tmpNodes = null;
+  }
 
-  const headerEl: HTMLElement = document.querySelector("header")!;
-  window.addEventListener("scroll", () => {
-    let height = headerEl.getBoundingClientRect().height;
-    if (window.scrollY - height > 600) {
-      if (!headerEl.classList.contains("pin")) headerEl.classList.add("pin");
-    } else {
-      headerEl.classList.remove("pin");
-    }
-  });
+  headerTrack();
+  contentTrack();
 });

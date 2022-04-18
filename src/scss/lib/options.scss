@@ -11,3 +11,18 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@mixin showing {
+  @keyframes showing {
+    from {
+      opacity: 0;
+      transform: scale(0) translateY(10vh) rotateY(120deg) rotateX(180deg)
+        rotateZ(90deg);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0) rotateY(0deg) rotateX(0deg)
+        rotateZ(0deg);
+    }
+  }
+}

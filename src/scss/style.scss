@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased !important;
   box-sizing: border-box; /* 包括padding和border的属性 */
 }
 
@@ -103,6 +104,6 @@ body {
   }
 }
 
-@import "./component/slogan.scss";
-@import "./component/header.scss";
-@import "./component/content.scss";
+@import "./lib/slogan.scss";
+@import "./lib/header.scss";
+@import "./lib/content.scss";

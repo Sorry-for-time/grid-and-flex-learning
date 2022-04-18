@@ -17,51 +17,51 @@
     border: 2px solid rgba(172, 172, 172, 0.616);
     overflow: hidden;
     position: relative;
-
-    filter: brightness(0.88);
     backdrop-filter: blur(26px);
-    transition: all 0.4s;
+
+    transition: 0.4s;
 
     &:hover {
-      z-index: 100;
-      cursor: pointer;
-      filter: brightness(1.1) saturate(1.2);
+      filter: brightness(1.4);
+      transform: scale(1.1);
+      box-shadow: 0 0 6px 1px rgba(51, 51, 51, 0.616) inset, 0 0 10px white;
     }
 
-    a {
-      // 使用混入
-      @include text-clip-fn(20deg);
-
-      display: flex;
-      z-index: 2;
-      text-align: center;
-      // font-family: "Titillium Web", sans-serif;
-      letter-spacing: 2px;
-      font-weight: bolder;
-      font-size: 26px;
-      padding: 30px;
-
-      &:hover {
-        filter: brightness(1.3) contrast(1.2);
-      }
-    }
-
+    // 设置每个子元素的不同动画延迟
+    @include showing; /* 引入动画设置 */
     @for $index from 1 through 12 {
       &:nth-child(#{$index}) {
         animation: showing #{2100 + $index * 100}ms ease-in-out forwards;
       }
     }
 
-    @keyframes showing {
-      from {
-        opacity: 0;
-        transform: scale(0) translateY(10vh) rotateY(120deg) rotateX(180deg)
-          rotateZ(90deg);
-      }
-      to {
-        transform: scale(1) translateY(0) rotateY(0deg) rotateX(0deg)
-          rotateZ(0deg);
-        opacity: 1;
+    a {
+      // 使用混合
+      @include text-clip-fn(20deg);
+
+      display: flex;
+      z-index: 2;
+      text-align: center;
+      letter-spacing: 2px;
+      font-weight: bolder;
+      font-size: 26px;
+      padding: 30px;
+
+      filter: brightness(0.7);
+      transition: 400ms ease-out;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.06);
+        animation: change-hue 1400ms linear infinite;
+        @keyframes change-hue {
+          from {
+            filter: brightness(1.1) contrast(1.2) hue-rotate(0deg);
+          }
+          to {
+            filter: brightness(1.1) contrast(1.2) hue-rotate(360deg);
+          }
+        }
       }
     }
   }
