@@ -7,11 +7,12 @@ export const headerTrack = (): void => {
       headerEl.classList.remove("once-show");
     },
     {
-      // 在第一次动画结束后移除次监听器
+      // 在第一次动画结束后移除此监听器
       once: true,
     }
   );
 
+  // 监听滚动位置, 当达到设定阈值或添加固定的样式/反之移除
   window.addEventListener("scroll", () => {
     let height = headerEl.getBoundingClientRect().height;
     if (window.scrollY - height > 600) {
