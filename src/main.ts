@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
   // 复制节点并插入到dom树
   let tmpNodes: Array<Node> | null = multiNodeCloneFactory(
     ".content li",
-    11,
+    BigInt(11),
     true
   );
 
