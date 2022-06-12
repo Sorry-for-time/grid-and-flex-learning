@@ -1,7 +1,7 @@
 # 👋Hi
 
-> 这个项目为我复习/练习 html 布局的一个小小结果
-> 页面采用了 grid 和 flex 布局, 此外还使用了一些比较新的 css3 属性, 像是 backdrop: filter 等, 这可能会在一些较老的浏览器(包括基 webkit 系列: chromium \<= 76 )上渲染不正常(IE 别尝试了, 对 grid 不支持). 以及界面尝试模仿了 jetbrains fleet 官网的部分效果(其实颜色代码我直接 copy 的 🤣).
+> 这个项目为我瞎折腾乱写的 css 样式练习(理直气壮)
+> 页面采用了 grid 和 flex 布局, 此外还使用了一些比较新的 css3 属性, 像是 backdrop: filter 等(好吧, 其实页不算新), 这可能会在一些较老的浏览器(包括基 webkit 系列: chromium \<= 76 )上渲染不正常(IE 不用尝试了, 直接寄掉). 以及界面视图尝试模仿了 jetbrains fleet 官网的部分效果(其实颜色代码我直接 copy 的 🤣).
 
 # References
 
@@ -14,6 +14,13 @@
 
 - [jetbrains fleet 官网](https://www.jetbrains.com/zh-cn/fleet/)
 - [文档查阅: MDN](https://developer.mozilla.org)
+
+## 简单展示
+
+- 主页面效果
+  <img src=".assets/major-screen.png" alt="图片好像没加载出来🥲" width="90%" />
+- 最小屏幕宽度
+  <img src=".assets/min-width-effect.png" alt="图片好像没加载出来🥲" width="90%" />
 
 ## 可能需要注意的地方:
 
@@ -28,11 +35,9 @@
      npm run dev
      # 如果就觉得可以了, 可以进行打包, 方便部署到 nginx 等环境下
      npm run build
-
      ```
 
-2. 这个项目使用了 sass 来进行 css 的简化编写(偷懒 ✌️)
-3. 项目使用了 typescript(因为我在学习它 🤣)
-4. 这只是我的一个练习/学习的项目, 如果写的很辣眼, 请不要生气 🤣
+2. 这个项目使用了 sass 来进行 css 的简化编写(理直气壮/偷懒 ✌️)
+3. 这只是我的一个练习/学习的项目, 如果写的很辣眼, 请不要生气 🤣
 
-## 持续更新中...
+## 持续更新中(如果我相到什么好玩的)...
