@@ -5,12 +5,12 @@
 
 # References
 
-#### 这个项目参考了一些博主给的滚动条样式(底下是连接)
+#### 这个项目参考了一些博主给的滚动条样式
 
 - [峰华前端工程师: Bilibili](https://space.bilibili.com/302954484)
 - [峰华的 github](https://github.com/zxuqian/html-css-examples)
 
-#### 样式参考 && 参考查阅
+#### 参考的样式以及文档查阅的来源
 
 - [jetbrains fleet 官网](https://www.jetbrains.com/zh-cn/fleet/)
 - [文档查阅: MDN](https://developer.mozilla.org)
@@ -18,9 +18,12 @@
 ## 简单展示
 
 - 主页面效果
-  <img src=".assets/major-screen.png" alt="图片好像没加载出来🥲" width="90%" />
+  <img src=".assets/major-screen.png" alt="图片好像没加载出来🥲" width="96%" />
+  
+<hr />
+
 - 最小屏幕宽度
-  <img src=".assets/min-width-effect.png" alt="图片好像没加载出来🥲" width="90%" />
+  <img src=".assets/min-width-effect.png" alt="图片好像没加载出来🥲" width="96%" />
 
 ## 可能需要注意的地方:
 
