@@ -1,14 +1,14 @@
 # 👋Hi
 
 > 这个项目是我瞎折腾乱写的 css 样式练习(~~理直气壮~~)
-> 页面采用了 grid 和 flex 布局, 此外还使用了一些比较新的 css3 属性, 像是 backdrop: filter 等(好吧, 其实页不算新), 这可能会在一些较老的浏览器(chromium \< 76 )上渲染不正常. 以及界面视图尝试模仿了 jetbrains fleet 官网的部分效果(~~其实颜色代码直接 copy 的 🤣~~).
+> 页面采用了 grid 和 flex 布局, 此外还使用了一些比较新的 css3 属性, 像是 backdrop: filter 等(好吧, 其实也不算新), 这可能会在一些较老的浏览器(chromium \< 76 )上渲染不正常. 以及界面视图尝试模仿了 jetbrains fleet 官网的部分效果(~~其实颜色代码直接 copy 的 ( •̀ ω •́ )✧~~).
 
 # References
 
-#### 这个项目参考了一些博主给的样式, 在这里表示感谢
+#### 这个项目参考了一些博主给的滚动条样式(底下是连接)
 
 - [峰华前端工程师: Bilibili](https://space.bilibili.com/302954484)
-  - [峰华的 github](https://github.com/zxuqian/html-css-examples)
+- [峰华的 github](https://github.com/zxuqian/html-css-examples)
 
 #### 样式参考 && 参考查阅
 
@@ -42,4 +42,4 @@
 2. 这个项目使用了 sass 来进行 css 的简化编写(~~理直气壮/偷懒 ✌️~~)
 3. 这只是我的一个练习/学习的项目(~~所以可能是辣眼的~~)
 
-## 持续更新中(如果我想到什么好玩的)...
+## 持续更新中(如果我想到什么好玩的[~~当然一如既往的不考虑兼容性, 觉得好玩就完事了~~])...
